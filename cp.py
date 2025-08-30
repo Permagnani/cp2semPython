@@ -54,16 +54,16 @@ def buscar_todas(dest_alvo):
 
 
     esquerda = pos
-    while esq - 1 >= 0 and mensagens[esq - 1]["destinatario"] == dest_alvo:
-        esq -= 1
+    while esquerda - 1 >= 0 and mensagens[esquerda - 1]["destinatario"] == dest_alvo:
+        esquerda -= 1
 
    
     direita = pos
-    while dir + 1 < len(mensagens) and mensagens[dir + 1]["destinatario"] == dest_alvo:
-        dir += 1
+    while direita + 1 < len(mensagens) and mensagens[direita + 1]["destinatario"] == dest_alvo:
+        direita += 1
 
 
-    return mensagens[esq:dir+1]
+    return mensagens[esquerda:direita+1]
 
 
 def cadastrar_interativo():
@@ -73,7 +73,7 @@ def cadastrar_interativo():
     assunto = input("Assunto: ").strip()
     destinatario = input("Destinatário (e-mail): ").strip()
     conteudo = input("Conteúdo: ").strip()
-    criar_mensagem(remetente, assunto, destinatario, remetente, conteudo)
+    criar_mensagem(remetente, assunto, destinatario, conteudo)
     ordenar() 
     print("Mensagem cadastrada.\n")
 
