@@ -71,7 +71,7 @@ def cadastrar_interativo():
     print("\n=== Cadastrar Mensagem ===")
     remetente = input("Remetente (e-mail): ").strip()
     assunto = input("Assunto: ").strip()
-    destinatario = input("Destinatário (e-mail): ").strip()
+    destinatario = input("Destinatario (e-mail): ").strip()
     conteudo = input("Conteúdo: ").strip()
     criar_mensagem(remetente, assunto, destinatario, conteudo)
     ordenar() 
@@ -82,7 +82,7 @@ def buscar_interativo():
         print("\nNão há mensagens cadastradas.\n")
         return
     ordenar()
-    alvo = input("\nDestinatário para buscar: ").strip()
+    alvo = input("\nDestinatario para buscar: ").strip()
     resultados = buscar_todas(alvo)
     if not resultados:
         print("Nenhuma mensagem para:", alvo, "\n")
@@ -93,7 +93,7 @@ def buscar_interativo():
             m = resultados[i]
             print("- Assunto:", m["assunto"])
             print("  Remetente:", m["remetente"])
-            print("  Conteúdo:", m["conteudo"])
+            print("  Conteudo:", m["conteudo"])
             i += 1
         print()
 
@@ -103,10 +103,10 @@ def menu():
     while True:
         print("=== MENU ===")
         print("1 - Cadastrar nova mensagem")
-        print("2 - Buscar por destinatário")
+        print("2 - Buscar por destinatario")
         print("3 - Total de mensagens")
         print("0 - Sair")
-        op = input("Opção: ").strip()
+        op = input("Opcao: ").strip()
 
         if op == "1":
             cadastrar_interativo()
@@ -118,6 +118,6 @@ def menu():
             print("Encerrando...")
             break
         else:
-            print("Opção inválida.\n")
+            print("Opção invalida.\n")
 
 menu()
